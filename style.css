@@ -30,32 +30,33 @@ body{
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    /* flex-direction: column; */
 }
 
 
 /* clock container */
 .clockContainer{
-    width: 60%;
+    width: 50%;
     height: 65%;
-    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-    border-radius: 8%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,160,187,1) 0%, rgba(0,188,219,0.90) 90% );
+    border-radius: 4%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     align-items: center;
     padding: 4% 0;
-    border: 10px solid black;
+    border: 10px solid #0f7a89;
+    box-shadow: 0px 4px 10px 5px #837676;
 }
 
 
 /* common styles for direct child div inside clock container */
 .clockContainer > div {
     width: 80%;
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-image: radial-gradient(circle at 10% 20%, rgb(159 236 237) 0.1%, rgb(135 196 213) 94.2%);
     margin-top: 2%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 1%;
+    box-shadow: 0px 0px 6px 0px grey;
 }
 
 
@@ -65,6 +66,7 @@ body{
 /* time display container */
 #timeDisplay{
     background-image: unset;
+    box-shadow: unset;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -75,7 +77,7 @@ body{
 
 /* clock image inside the time display */
 .clockImage{
-    background-image: url("./3557755.png");
+    background-image: url("./Images/clock.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
@@ -87,7 +89,9 @@ body{
 #currentTime{
     width: 65%;
     height:100%;
-    background-color: black;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgb(59 196 199) 0.1%, rgb(99 187 211) 94.2% );
+    border-radius: 2%;
+    box-shadow: 0px 0px 6px 0px grey;
 }
 
 
@@ -123,8 +127,9 @@ body{
     width: 20%;
     height: 25px;
     font: 1rem sans-serif;
-    border: 1px solid palevioletred;
+    border: 2px solid #00BCD4;
     border-radius: 4px;
+    color: #009688;
     background-color: transparent;
 }
 
@@ -138,15 +143,14 @@ button{
     border: none;
     color: white;
     border-radius:5px;
-    box-shadow: 0px 0px 4px 1px grey;
+    box-shadow: 0px 0px 2px 0px grey;
 }
 
 
 /* set alarm button  */
 #btnContainer button{
-    background-image: linear-gradient(to right, #f857a6 0%, #ff5858 51%, #f857a6 100%);
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
     font-size: 1rem;
-    font-weight: 600;
     width: 25%;
     height: 30px;
 }
@@ -173,14 +177,14 @@ button{
     justify-content: space-between;
     font: 1rem sans-serif;
     font-weight: 600;
-    color:#b721ff;
-    border-bottom: 1px solid rgb(138, 109, 243);
+    color: #00BCD4;
+    border-bottom: 1px solid #00BCD4;
 }
 
 
 /* alarm delete button */
 .delete{
-    background-color: red;
+    background-color: #009688;
     height: 80%;
 }
 
@@ -189,53 +193,96 @@ button{
 
 /*  ======================== Responsive Styles =================== */
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1525px) {
     #currentTime span{
-        font-size: 3.5rem;
+        font-size: 3.6rem;
     }
 }
 
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1250px) {
+    #timeDisplay{
+        height: 15%;
+    }
+
+    .clockImage{
+        background-image: none;
+        width: unset;
+        height: unset;
+    }
+    
+    #currentTime{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    #timeDisplay{
+        height: 18%;
+    }
+
+    #alarmList{
+        height: 45%;
+    }
+
     #currentTime span{
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+
+    #alarmList{
+        height: 60%;
     }
 }
 
 
 @media screen and (max-width: 910px) {
+    #timeDisplay{
+        height: auto;
+    }
+
+    #btnContainer button {
+        width: 30%;
+    }
+
     #currentTime span{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 }
 
-@media screen and (max-width: 740px) {
-    #timeInput select{
-        font-size: small;
+@media screen and (max-width: 795px) {
+    #alarmList{
+        height: 70%;
     }
 
-    #btnContainer button{
-        font-size: small;
-        font-weight: normal;
+    .clockContainer > div{
+        width: 95%;
+    }
+
+    #currentTime span{
+        font-size: 3rem;
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 680px) {
+
+    #timeDisplay{
+        height: auto;
+    }
+
     #timeInput select{
         /* font-size: 12px; */
         text-overflow: ellipsis;
     }
 
-    #btnContainer button{
-        font-size: smaller;
-        font-weight: normal;
+    #btnContainer button {
+        width: 40%;
     }
 }
 
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 580px) {
     #currentTime span{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
