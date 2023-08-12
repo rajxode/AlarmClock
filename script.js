@@ -1,17 +1,21 @@
 
+// array to store all the alarms
 var alarmList=[];
 
+// div in which append all the added alarms
 const list=document.getElementById("alarmList");
 
 // to append option value inside the drop down of set alarm 
 const selectTag = document.querySelectorAll("select");
 
+// appending values inside the select tag 
+// for hours
 for(let i=12 ;i > 0;i--){
     i = i < 10? `0${i}`: i;
     let option = `<option value=${i}>${i}</option>`;
     selectTag[0].firstElementChild.insertAdjacentHTML("afterend",option);
 }
-
+// for minutes
 for(let i=59 ;i >= 0;i--){
     i = i < 10? `0${i}`: i;
     let option = `<option value=${i}>${i}</option>`;
@@ -59,8 +63,10 @@ function currentTime(){
         seconds = `0${seconds}`;
     }
 
+    // checking whether there is a alarm set for current time in alarm list
     let timeCurrent=`${hours}:${minutes}:${seconds} ${session}`;
     alarmList.map((alarm) => {
+        // if there is an alarm then show alert message
         if(alarm.time === timeCurrent){
             window.alert("alarm ring");
         }
@@ -74,16 +80,19 @@ function currentTime(){
     document.getElementById("session").innerHTML = session;
 }
 
+// calling the above function continuously on interval of 1 second
 setInterval(currentTime, 1000);
 
 
+// adding alarm to the display of alarm clock
 function addAlarmToDisplay(alarm){
     // creating html element 'li'
 	var div=document.createElement('div');
-
+    // inner data of div element
+    // with alarm time and a delete button
 	div.innerHTML=`
                     <div>
-                        <img src="./3557755.png" alt="clock width="20px" height="20px" />
+                        <img src="/Images/clock.png" alt="clock width="20px" height="20px" />
                         ${alarm.time}
                     </div>  
 
@@ -92,14 +101,17 @@ function addAlarmToDisplay(alarm){
                     </div>
 	`;
 
+    // the the alarm inside the div
 	list.append(div);
 	return;
 
 }
 
 
+// render the Dom to appned new element to the screen 
 function renderDom(){
     list.innerHTML='';
+    // mapping over each alarm to add it to the screen
     alarmList.map((alarm) => addAlarmToDisplay(alarm));
 }
 
@@ -129,6 +141,7 @@ function addAlarm(){
     // append alarm time in alarm list
     alarmList.push(alarmTime);
 
+    // reset the values to initial
     document.getElementById("hoursInput").value='Hour';
     document.getElementById("minutesInput").value='Minute';
     document.getElementById("sessionInput").value='AM';
@@ -136,7 +149,9 @@ function addAlarm(){
 }
 
 
+// remove a alarm from list
 function removeAlarm(alarmId){
+    // filter the alarm which don't match the id
     const newAlarmList = alarmList.filter((alarm) => alarm.id != alarmId);
     alarmList = newAlarmList;
     return;
@@ -148,11 +163,15 @@ function removeAlarm(alarmId){
 document.addEventListener("click",(event)=>{
     event.preventDefault();
     const target=event.target;
+    // if click on set alarm button
     if(target.className === "setAlarmBtn"){
         addAlarm();
     }
+    // if click on delete button
     else if(target.className === "delete"){
         removeAlarm(target.id);
     }
+
+    // render the dom
     renderDom();
 });
