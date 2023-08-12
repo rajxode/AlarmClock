@@ -1,6 +1,7 @@
 # AlarmClock
 This is an alarm clock project made using HTML, CSS and Vanilla JavaScript. Here, a user can see the current time, add multiple alarms and remove a alarm. When the alarm time goes off user will be shown a window alert message.
 
+<a href="https://rajxode.github.io/AlarmClock/" />Go Live on Clock </a>
 
 # Run 
 - Get the code on your machine.
