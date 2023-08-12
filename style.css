@@ -193,113 +193,143 @@ button{
 
 /*  ======================== Responsive Styles =================== */
 
+
+/* styles below width :1525px */
 @media screen and (max-width: 1525px) {
 
+    /* main clock container */
     .clockContainer{
         width: 55%;
     }
 
+    /* font of time shown */
     #currentTime span{
         font-size: 3.6rem;
     }
 }
 
 
+/* styles below width 1250px */
 @media screen and (max-width: 1250px) {
 
+    /* main clock container */
     .clockContainer{
         width: 60%;
     }
 
+    /* time panel of clock */
     #timeDisplay{
         height: 15%;
     }
 }
 
+
+/* styles below width 1070px */
 @media screen and (max-width: 1070px) {
 
+    /* main clock container */
     .clockContainer{
         width: 65%;
     }
 
+    /* time panel of clock */
     #timeDisplay{
         height: 18%;
     }
 
-    #alarmList{
-        height: 45%;
-    }
 
+    /* time font */
     #currentTime span{
         font-size: 3.5rem;
     }
 
+    /* */
     #alarmList{
         height: 60%;
     }
 }
 
 
+/* styles below width 935px */
 @media screen and (max-width: 935px) {
 
+    /* main clock container */
     .clockContainer{
         width: 70%;
     }
 
+    /* time panel */
     #timeDisplay{
         height: auto;
     }
 
+    /* set alarm button */
     #btnContainer button {
         width: 30%;
     }
 
+    /* current time font */
     #currentTime span{
         font-size: 3rem;
     }
 }
 
+
+/* styles below width 795px */
 @media screen and (max-width: 795px) {
 
+    /* main clock container */
     .clockContainer{
         width: 75%;
     }
 
+    /* alarm list  */
     #alarmList{
         height: 70%;
     }
 
+    /* div inside clock container */
     .clockContainer > div{
         width: 95%;
     }
 }
 
+
+/* styles below width 680px */
 @media screen and (max-width: 680px) {
 
+    /* main clock  */
     .clockContainer{
         width: 80%;
     }
 
+    /* time panel */
     #timeDisplay{
         height: auto;
     }
 
+
+    /* select tag */
     #timeInput select{
         text-overflow: ellipsis;
     }
 
+    /* set alarm button */
     #btnContainer button {
         width: 40%;
     }
 }
 
 
+/* styles below width 580px */
 @media screen and (max-width: 580px) {
 
+    /* main clock container */
     .clockContainer{
         width: 85%;
     }
 
+    /* current time font */
     #currentTime span{
         font-size: 2.5rem;
     }
