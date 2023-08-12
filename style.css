@@ -194,6 +194,11 @@ button{
 /*  ======================== Responsive Styles =================== */
 
 @media screen and (max-width: 1525px) {
+
+    .clockContainer{
+        width: 55%;
+    }
+
     #currentTime span{
         font-size: 3.6rem;
     }
@@ -201,6 +206,11 @@ button{
 
 
 @media screen and (max-width: 1250px) {
+
+    .clockContainer{
+        width: 60%;
+    }
+
     #timeDisplay{
         height: 15%;
     }
@@ -217,6 +227,11 @@ button{
 }
 
 @media screen and (max-width: 1070px) {
+
+    .clockContainer{
+        width: 65%;
+    }
+
     #timeDisplay{
         height: 18%;
     }
@@ -236,6 +251,11 @@ button{
 
 
 @media screen and (max-width: 910px) {
+
+    .clockContainer{
+        width: 70%;
+    }
+
     #timeDisplay{
         height: auto;
     }
@@ -250,6 +270,11 @@ button{
 }
 
 @media screen and (max-width: 795px) {
+
+    .clockContainer{
+        width: 75%;
+    }
+
     #alarmList{
         height: 70%;
     }
@@ -265,12 +290,15 @@ button{
 
 @media screen and (max-width: 680px) {
 
+    .clockContainer{
+        width: 80%;
+    }
+
     #timeDisplay{
         height: auto;
     }
 
     #timeInput select{
-        /* font-size: 12px; */
         text-overflow: ellipsis;
     }
 
@@ -281,6 +309,11 @@ button{
 
 
 @media screen and (max-width: 580px) {
+
+    .clockContainer{
+        width: 85%;
+    }
+
     #currentTime span{
         font-size: 2.5rem;
     }
