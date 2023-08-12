@@ -214,16 +214,6 @@ button{
     #timeDisplay{
         height: 15%;
     }
-
-    .clockImage{
-        background-image: none;
-        width: unset;
-        height: unset;
-    }
-    
-    #currentTime{
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 1070px) {
@@ -241,7 +231,7 @@ button{
     }
 
     #currentTime span{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     #alarmList{
@@ -250,7 +240,7 @@ button{
 }
 
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 935px) {
 
     .clockContainer{
         width: 70%;
@@ -265,7 +255,7 @@ button{
     }
 
     #currentTime span{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
@@ -281,10 +271,6 @@ button{
 
     .clockContainer > div{
         width: 95%;
-    }
-
-    #currentTime span{
-        font-size: 3rem;
     }
 }
 
