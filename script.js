@@ -20,6 +20,7 @@ for(let i=59 ;i >= 0;i--){
     i = i < 10? `0${i}`: i;
     let option = `<option value=${i}>${i}</option>`;
     selectTag[1].firstElementChild.insertAdjacentHTML("afterend",option);
+    selectTag[2].firstElementChild.insertAdjacentHTML("afterend",option);
 }
 
 
@@ -73,7 +74,7 @@ function currentTime(){
     })
 
 
-    // rendering time inside dom
+    // rendering time inside current time panel
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
@@ -92,7 +93,7 @@ function addAlarmToDisplay(alarm){
     // with alarm time and a delete button
 	div.innerHTML=`
                     <div>
-                        <img src="/Images/clock.png" alt="clock" width="20px" height="20px" />
+                        <img src="/Images/favicon.png" alt="clock" width="20px" height="20px" />
                         ${alarm.time}
                     </div>  
 
@@ -121,21 +122,23 @@ function addAlarm(){
     const hour=document.getElementById("hoursInput").value;
     // minute
     const minute=document.getElementById("minutesInput").value;
+    // seconds
+    const second=document.getElementById("secondsInput").value;
     // am or pm
     const amPM=document.getElementById("sessionInput").value;
 
     // whether user entered correct value or not
 
     // if entered data is incorrect then show error message 
-    if(hour === "Hour" || minute === "Minute"){
-        window.alert("Enter Correct value !!");
+    if(hour === "Hour" || minute === "Minute" || second === "Second"){
+        window.alert("Enter Correct values HH:MM:SS !!");
         return;
     }
     // if entered correct value show alert message of new alarm added.
-    window.alert(`Alarm set for ${hour} : ${minute} ${amPM}`);
+    window.alert(`Alarm set for ${hour} : ${minute} : ${second} ${amPM}`);
     // store alarm time
     let alarmTime = {
-        time:`${hour}:${minute}:00 ${amPM}`,
+        time:`${hour}:${minute}:${second} ${amPM}`,
         id:Date.now().toString()
     };
     // append alarm time in alarm list
