@@ -1,0 +1,241 @@
+
+/* styles for body */
+body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+
+
+/* styling the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color:transparent;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(85, 189, 238); 
+    border-radius: 10px;
+    height: 10px;
+}
+
+
+/* main container of page */
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    /* flex-direction: column; */
+}
+
+
+/* clock container */
+.clockContainer{
+    width: 60%;
+    height: 65%;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 4% 0;
+    border: 10px solid black;
+}
+
+
+/* common styles for direct child div inside clock container */
+.clockContainer > div {
+    width: 80%;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    margin-top: 2%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/* =============== to show time ========= */
+
+
+/* time display container */
+#timeDisplay{
+    background-image: unset;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* clock image inside the time display */
+.clockImage{
+    background-image: url("./3557755.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 15%;
+}
+
+
+/* to show current time */
+#currentTime{
+    width: 65%;
+    height:100%;
+    background-color: black;
+}
+
+
+#currentTime span{
+    font-size: 4.5rem;
+    color: #fff;
+}
+
+
+/*  ================  To Add a new alarm =========== */
+
+/* for adding a new alarm  */
+#addAlarm{
+    height:15%;
+    padding: 2% 0 1% 0;
+}
+
+
+/* div inside the add alarm section */
+#addAlarm > div{
+    width: 100%;
+}
+
+
+/* input Container for taking user's input */
+#timeInput{
+    margin-bottom: 8px;
+}
+
+
+/* select tag inside the input Container */
+#timeInput select{
+    width: 20%;
+    height: 25px;
+    font: 1rem sans-serif;
+    border: 1px solid palevioletred;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+#timeInput select:focus{
+    outline: none;
+}
+
+
+/* common styles for buttons */
+button{
+    border: none;
+    color: white;
+    border-radius:5px;
+    box-shadow: 0px 0px 4px 1px grey;
+}
+
+
+/* set alarm button  */
+#btnContainer button{
+    background-image: linear-gradient(to right, #f857a6 0%, #ff5858 51%, #f857a6 100%);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 25%;
+    height: 30px;
+}
+
+
+/* ===================== Alarm List =============== */
+
+
+/* alarm list container */
+#alarmList{
+    height:55%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* single alarm element */
+#alarmList > div{
+    width: 93%;
+    padding: 0 2%;
+    margin:10px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font: 1rem sans-serif;
+    font-weight: 600;
+    color:#b721ff;
+    border-bottom: 1px solid rgb(138, 109, 243);
+}
+
+
+/* alarm delete button */
+.delete{
+    background-color: red;
+    height: 80%;
+}
+
+
+
+
+/*  ======================== Responsive Styles =================== */
+
+@media screen and (max-width: 1310px) {
+    #currentTime span{
+        font-size: 3.5rem;
+    }
+}
+
+
+@media screen and (max-width: 1040px) {
+    #currentTime span{
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 910px) {
+    #currentTime span{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #timeInput select{
+        font-size: small;
+    }
+
+    #btnContainer button{
+        font-size: small;
+        font-weight: normal;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #timeInput select{
+        /* font-size: 12px; */
+        text-overflow: ellipsis;
+    }
+
+    #btnContainer button{
+        font-size: smaller;
+        font-weight: normal;
+    }
+}
+
+
+@media screen and (max-width: 510px) {
+    #currentTime span{
+        font-size: 2rem;
+    }
+}
+
