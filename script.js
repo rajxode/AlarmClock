@@ -93,7 +93,7 @@ function addAlarmToDisplay(alarm){
     // with alarm time and a delete button
 	div.innerHTML=`
                     <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5539/5539547.png" alt="clock" width="20px" height="20px" />
+                        <img src="/Images/favicon.png" alt="clock" width="20px" height="20px" />
                         ${alarm.time}
                     </div>  
 
@@ -147,7 +147,7 @@ function addAlarm(){
     // reset the values to initial
     document.getElementById("hoursInput").value='Hour';
     document.getElementById("minutesInput").value='Minute';
-    document.getElementById("secondssInput").value='Second';
+    document.getElementById("secondsInput").value='Second';
     document.getElementById("sessionInput").value='AM';
     return;
 }
