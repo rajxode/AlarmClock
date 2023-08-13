@@ -147,6 +147,7 @@ function addAlarm(){
     // reset the values to initial
     document.getElementById("hoursInput").value='Hour';
     document.getElementById("minutesInput").value='Minute';
+    document.getElementById("secondssInput").value='Second';
     document.getElementById("sessionInput").value='AM';
     return;
 }
