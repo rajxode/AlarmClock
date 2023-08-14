@@ -17,10 +17,6 @@ This is an alarm clock project made using HTML, CSS and Vanilla JavaScript. Here
 - When the alarm time goes off user will recieve a window alert message.
 
 
-
-  ![clock](https://github.com/rajxode/AlarmClock/assets/120395470/478c9fd7-dc24-4dac-afa6-7d1a1768399e)
-
-
 # Tools used
 - HTML
 - CSS
