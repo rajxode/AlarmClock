@@ -93,7 +93,7 @@ function addAlarmToDisplay(alarm){
     // with alarm time and a delete button
 	div.innerHTML=`
                     <div>
-                        <img src="/Images/favicon.png" alt="clock" width="20px" height="20px" />
+                        <img src="Images/favicon.png" alt="clock" width="20px" height="20px" />
                         ${alarm.time}
                     </div>  
 
